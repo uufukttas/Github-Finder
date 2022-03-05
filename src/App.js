@@ -4,6 +4,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/layouts/Navbar";
 import Footer from "./components/layouts/Footer";
+import Alert from "./components/layouts/Alert"; 
 import { GithubProvider } from "./Context/Github/GithubContext";
 import { AlertProvider } from "./Context/Alert/AlertContext";
 
@@ -15,6 +16,7 @@ function App() {
                     <div className="flex h-screen flex-col justify-between">
                         <Navbar />
                         <main className="container mx-auto px-3 pb-12">
+                            <Alert/>
                             <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route path="/about" element={<About />} />
